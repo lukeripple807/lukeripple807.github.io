@@ -1,0 +1,376 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Website Timer</title>
+    <title>Lukes Shed V40</title>
+    <link rel="icon" type="image/x-icon" href="v40fav.png">
+
+    <style>
+        body {
+ margin: 100px;
+ color: #ffffff;
+ text-align: center;
+ font-family: Arial, Helvetica, sans-serif;
+}
+  
+h2 {
+  font-family: Helvetica;
+  }
+p {
+  font-family: sans-serif;
+  }
+
+.topnav {
+  overflow: hidden;
+  background-color: #93B1A6;
+  background-color: #9d9d9da1;
+  position: -webkit-sticky;
+  position: sticky;
+  padding: 10px;
+  -webkit-transition-duration: 0.4s; /* Safari */
+  transition-duration: 0.4s;
+  border-radius: 10px 10px;
+  border: #2d3633 solid;
+}
+
+.topnav:hover {
+  box-shadow: 0 12px 16px 0 rgba(131, 130, 130, 0.24),0 17px 50px 0 rgba(141, 141, 141, 0.19);
+}
+
+.topnav a {
+  float: left;
+  color: #183D3D;
+  color: #dedede;
+  text-align: center;
+  padding: 30px 16px;
+  text-decoration: none;
+  font-size: 17px;
+  -webkit-transition-duration: 0.4s; /* Safari */
+  transition-duration: 0.4s;
+}
+
+.topnav a:hover {
+  background-color: #779087;
+  background-color: #656565;
+  color: rgb(255, 255, 255);
+  border-radius: 10px 10px;
+}
+
+.topnav a.active {
+  background-color: #5c967f;
+  color: rgb(255, 255, 255);
+  background-color: #dedede;
+  color: rgb(150, 150, 150);
+  border-radius: 10px 10px;
+}
+
+.img {
+  border-radius: 10px 10px;
+}
+
+.btn {
+  all: unset;
+  background-color: #93B1A6; /* Green */
+  background-color: #9d9d9da1;
+  border: none;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  padding: 20px;
+  border: #2d3633 solid;
+  font-size: 16px;
+  margin: 4px 2px;
+  width: 40%;
+  cursor: pointer;
+  -webkit-transition-duration: 0.4s; /* Safari */
+  transition-duration: 0.4s;
+  border-radius: 10px;
+}
+
+.btn:hover {
+  box-shadow: 0 12px 16px 0 rgba(255, 255, 255, 0.24),0 17px 50px 0 rgba(255, 255, 255, 0.19);
+}
+
+.wiwi {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.dick {
+  width: 150px;
+  height: 150px;
+  border-radius: 5px 5px;
+}
+
+.linkpicture {
+  border-radius: 10px;
+  width: 20%;
+  margin: 20px;
+  display: inline-block;
+  border-radius: 10px;
+}
+
+#myInput {
+  margin-top: 10px;
+  background-color: #dedede00;
+  background-repeat: no-repeat; /* Do not repeat the icon image */
+  width: 60%; /* Full-width */
+  font-size: 16px; /* Increase font-size */
+  padding: 20px;
+  margin-bottom: 12px;
+  float: right;
+  top: 0;
+  border: black 1px solid;
+  border-radius: 10px;
+  text-align: center;
+  text-decoration: none;
+}
+
+
+#myUL {
+  /* Remove default list styling */
+  list-style-type: none;
+}
+
+/* width */
+::-webkit-scrollbar {
+  width: 20px;
+}
+
+.key {
+  text-align: center;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 5px grey; 
+  border-radius: 1px;
+}
+
+.games {
+  width: 70px;
+  height: 70px;
+  border-radius: 10px;
+}
+
+.ffa {
+  color: rgb(0, 0, 0);
+}
+
+.ad {
+  all: unset;
+  background-color: #93B1A6; /* Green */
+  background-color: #9d9d9da1;
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  border: #2d3633 solid;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+  -webkit-transition-duration: 0.4s; /* Safari */
+  transition-duration: 0.4s;
+  border-radius: 10px 10px;
+  margin: 10px;
+}
+
+.ad:hover {
+  box-shadow: 0 12px 16px 0 rgba(255, 255, 255, 0.24),0 17px 50px 0 rgba(255, 255, 255, 0.19);
+  border-radius: 10px 10px;
+  padding: 0px;
+
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #316d71; 
+  border-radius: 10px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #222265; 
+}
+
+body {
+    font-family: -apple-system, BlinkMacSystemFont, sans-serif;
+    overflow: auto;
+    background: linear-gradient(315deg, rgb(70, 94, 99) 3%, rgb(61, 81, 100) 38%, rgb(83, 118, 115) 68%, rgb(7, 30, 87) 98%);
+    animation: gradient 15s ease infinite;
+    background-size: 400% 400%;
+    background-attachment: fixed;
+}
+
+@keyframes gradient {
+    0% {
+        background-position: 0% 0%;
+    }
+    50% {
+        background-position: 100% 100%;
+    }
+    100% {
+        background-position: 0% 0%;
+    }
+}
+
+.wave {
+    background: rgba(255, 255, 255, 0.25);
+    border-radius: 1000% 1000% 0 0;
+    position: fixed;
+    width: 200%;
+    height: 12em;
+    animation: wave 10s -3s linear infinite;
+    transform: translate3d(0, 0, 0);
+    opacity: 0.8;
+    bottom: 0;
+    left: 0;
+    z-index: -1;
+}
+
+.wave:nth-of-type(2) {
+    bottom: -1.25em;
+    animation: wave 18s linear reverse infinite;
+    opacity: 0.8;
+}
+
+.wave:nth-of-type(3) {
+    bottom: -2.5em;
+    animation: wave 20s -1s reverse infinite;
+    opacity: 0.9;
+}
+
+@keyframes wave {
+    2% {
+        transform: translateX(1);
+    }
+
+    25% {
+        transform: translateX(-25%);
+    }
+
+    50% {
+        transform: translateX(-50%);
+    }
+
+    75% {
+        transform: translateX(-25%);
+    }
+
+    100% {
+        transform: translateX(1);
+    }
+}
+
+.txt {
+  all: unset;
+  background-color: #93B1A6; /* Green */
+  background-color: #9d9d9da1;
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  border: #2d3633 solid;
+  font-size: 20px;
+  margin: 4px 2px;
+  cursor: pointer;
+  -webkit-transition-duration: 0.4s; /* Safari */
+  transition-duration: 0.4s;
+  border-radius: 10px 10px;
+  margin: 10px;
+  width: 80%;
+}
+
+#timer {
+  font-size: 12px;
+}
+
+.timer {
+  font-size: 12px;
+}
+        </style>
+
+</head>
+<body>
+        <div>
+          <div class="wave"></div>
+          <div class="wave"></div>
+          <div class="wave"></div>
+       </div>
+       <a onclick="window.location.href='quiz.html';"><div class="ad"><img class="img" width="250px" height="125px" src="Lukes shed v40.png"></div></a>
+
+       <div class="topnav">
+        <a class="active" href="settings.html">⚙️</a>
+        <a href="index.html">Popular</a>
+        <a href="flash.html">Flash</a>
+        <a href="unity.html">Unity</a>
+        <a href="multiplayer.html">Multiplayer</a>
+        <input class="key" type="text" id="myInput" onkeyup="myFunction()" placeholder="Search Luke Shed V.40">
+      </div>
+  
+      <div class="txt">
+    <p class="timer">The amount of time you spent on Lukes Shed:<br> <span id="timer">0:00</span></p>
+    <h2>Luke Shed Link Dispenser:</h2>
+    <button class="btn" onclick="redirect()">Get Random Link</button>
+  </div>
+
+</body>
+</html>
+    <script>// Initialize variables
+       let seconds = 0;
+let minutes = 0;
+let hours = 0;
+let display = document.getElementById('timer');
+let startTime = localStorage.getItem('startTime');
+
+if (startTime) {
+    startTime = parseInt(startTime);
+} else {
+    startTime = Date.now();
+    localStorage.setItem('startTime', startTime);
+}
+
+setInterval(function() {
+    let currentTime = Date.now();
+    let elapsedTime = Math.floor((currentTime - startTime) / 1000);
+
+    hours = Math.floor(elapsedTime / 3600);
+    elapsedTime %= 3600;
+    minutes = Math.floor(elapsedTime / 60);
+    seconds = elapsedTime % 60;
+
+    display.innerHTML = (hours ? (hours > 9 ? hours : "0" + hours) : "00") + ":" + (minutes ? (minutes > 9 ? minutes : "0" + minutes) : "00") + ":" + (seconds > 9 ? seconds : "0" + seconds);
+}, 1000);
+
+window.onbeforeunload = function() {
+    let timeSpent = {
+        hours: hours,
+        minutes: minutes,
+        seconds: seconds
+    };
+    localStorage.setItem('timeSpent', JSON.stringify(timeSpent));
+};
+function redirect() {
+      // Define an array of URLs
+      var urls = [
+        'https://ascensionbanks.github.io/andydsucks/',
+        'https://lukeripple807.github.io/binladen/',
+        'https://ascensionbanks.github.io/lukeshedv30/index.html',
+        // Add more URLs as needed
+      ];
+
+      // Get a random URL from the array
+      var randomUrl = urls[Math.floor(Math.random() * urls.length)];
+
+      // Open the random URL in a new tab
+      window.open(randomUrl, '_blank');
+    }
+        </script>
