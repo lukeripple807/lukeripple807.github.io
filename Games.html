@@ -404,32 +404,45 @@
     }
 }
 
-var myVar;
+document.addEventListener('DOMContentLoaded', function() {
+  const container = document.querySelector('.container');
+  const divs = Array.from(container.querySelectorAll('.linkpicture'));
 
-function startTimer() {
-    myVar = setTimeout(showPage, 1000);
-}
+  // Function to shuffle the divs' order
+  const shuffledDivs = shuffle(divs);
 
-function showPage() {
-    // Hide the loader and show the content
-    document.getElementById("loader").style.display = "none";
-    document.getElementById("contentToHide").style.display = "block";
-}
-
-  function showPage() {
-    // Hide the loader and show the content
-    document.getElementById("loader").style.display = "none";
-    document.getElementById("contentToHide").style.display = "block";
-}
-
-(window).scroll(function(e){ 
-  var $el = $('.header'); 
-  var isPositionFixed = ($el.css('position') == 'fixed');
-  if ($(this).scrollTop() > 200 && !isPositionFixed){ 
-    $el.css({'position': 'fixed', 'top': '0px'}); 
+  // Remove existing divs from the container
+  while (container.firstChild) {
+    container.removeChild(container.firstChild);
   }
-  if ($(this).scrollTop() < 200 && isPositionFixed){
-    $el.css({'position': 'static', 'top': '0px'}); 
-  } 
+
+  // Append shuffled divs to the container
+  shuffledDivs.forEach(div => {
+    container.appendChild(div);
+  });
 });
+
+// Function to shuffle an array
+function shuffle(array) {
+  let currentIndex = array.length;
+  let temporaryValue, randomIndex;
+
+  // Create a copy of the array to avoid modifying the original array
+  const newArray = array.slice();
+
+  // While there remain elements to shuffle...
+  while (currentIndex !== 0) {
+    // Pick a remaining element...
+    randomIndex = Math.floor(Math.random() * currentIndex);
+    currentIndex -= 1;
+
+    // And swap it with the current element.
+    temporaryValue = newArray[currentIndex];
+    newArray[currentIndex] = newArray[randomIndex];
+    newArray[randomIndex] = temporaryValue;
+  }
+
+  return newArray;
+}
+
 </script>
