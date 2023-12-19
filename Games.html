@@ -14,7 +14,7 @@
       }
       
       body{
-    background-color: rgb(26, 24, 24);
+    background-color: #5d584e;
     font-family: 'Comic Sans MS';
 
 }
@@ -28,10 +28,11 @@
         display: flex;
         align-items: center;
         justify-content: space-between; /* Align elements at the ends */
-        padding: 10px;
-        background-color: #2c2c2c; /* White background for header */
+        padding-top: 20px;
+        padding-bottom: 20px;
+        background-color: #776B5D; /* White background for header */
         box-shadow: 0 10px 15px rgba(0, 0, 0, 0.356); /* Adding a shadow */
-        border-radius: 0px 0px 20px 20px; 
+        border-radius: 0px 0px 20px 20px;
       }
       
       
@@ -79,12 +80,12 @@
       
       nav ul li a {
         text-decoration: none;
-        color: #cccccc;
+        color: white;
         transition: .5s ease;
         padding: 10px 30px;
         border-radius: 5px;
         box-shadow: 0 12px 16px 0 #cccccc14,0 17px 20px 0 #afafaf16;
-        border: 2px solid #cccccc;
+        border: 2px solid white;
       }
       
       nav ul li a:hover {
@@ -102,7 +103,7 @@
     
     .btn {
       all: unset;
-      background-color: #2c2c2c;
+      background-color: #787165;
       border: none;
       box-shadow: 0 10px 15px rgba(0, 0, 0, 0.356); /* Adding a shadow */
       padding: 15px 32px;
@@ -112,7 +113,7 @@
       padding: 20px;
       font-size: 16px;
       margin: 4px 2px;
-      color: #cccccc;
+      color: white;
       width: 35%;
       cursor: pointer;
       -webkit-transition-duration: 0.4s; /* Safari */
@@ -121,7 +122,7 @@
     }
     
     .btn:hover {      
-      background-color: rgb(55, 55, 55);
+      background-color: #8e8679;
       box-shadow: 0 12px 16px 0 #cccccc1e,0 17px 20px 0 #afafaf14;
     }
     
@@ -147,37 +148,32 @@
       }
       
       #myInput {
-        background-color: #2c2c2c;
+        background-color: #776b5d00;
         background-repeat: no-repeat; /* Do not repeat the icon image */
         width: 200%; /* Define your preferred width */
         font-size: 16px; /* Increase font-size */
+        color: white;
         font-family: 'Comic Sans MS';
         padding: 20px;
         padding-top: 15px;
         padding-bottom: 15px;
+        margin-right: 20px;
         text-align: center;
         box-shadow: 0 12px 16px 0 #cccccc1e,0 17px 20px 0 #afafaf14;
-        border: 2px solid #cccccc;
+        border: 2px solid white;
         border-radius: 10px;
         -webkit-transition-duration: 0.4s; /* Safari */
       transition-duration: 0.4s;
         text-align: center;
       }
+
+      #myInput::placeholder {
+        color: white;
+        opacity: 1;
+      }
       
       #myInput:hover {
         box-shadow: 0 12px 16px 0 #cccccc48,0 17px 20px 0 #afafaf46;
-      }
-      
-      #myUL {
-        /* Remove default list styling */
-        list-style-type: none;
-      }
-      
-      #navbar {
-        transition: top 0.8s;
-        position: fixed;
-        width: 100%;
-        top: 0;
       }
 
       /* width */
@@ -202,9 +198,6 @@
         border-radius: 10px;
       }
       
-      .ffa {
-        color: rgb(0, 0, 0);
-      }
     
       .container {
         text-align: center;
@@ -223,20 +216,17 @@
     color: #545454
 }
 
-.logo img {
-  max-width: 100px; /* Adjust the logo size */
-  margin-left: 40px;
-  margin-right: 40px;
-}
+#navbar {
+        transition: top 0.8s;
+        position: fixed;
+        width: 100%;
+        top: 0;
+      }
     </style>
 </head>
 <body>
   <header id="navbar">
 
-    <div class="logo">
-      <!-- Your logo goes here -->
-      <img src="https://i.ibb.co/xgQFqGy/lite-1.png">
-    </div>
     <nav>
       <ul class="nav-links">
         <li><a href="Games.html">Popular</a></li>
